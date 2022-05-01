@@ -1,47 +1,41 @@
+import axios from 'axios';
+
 export const loadSvgData = (setSvgData) => {
-  fetch('assets/svg/torso.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, torso: json }));
+  axios.get('assets/svg/torso.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, torso: response.data }));
     });
-  fetch('assets/svg/clothes.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, clothes: json }));
+  axios.get('assets/svg/clothes.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, clothes: response.data }));
     });
 
-  fetch('assets/svg/arms.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, arms: json }));
+  axios.get('assets/svg/arms.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, arms: response.data }));
     });
 
-  fetch('assets/svg/legs.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, legs: json }));
+  axios.get('assets/svg/legs.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, legs: response.data }));
     });
 
-  fetch('assets/svg/head.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, head: json }));
+  axios.get('assets/svg/head.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, head: response.data }));
     });
 
-  fetch('assets/svg/mouth.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, mouth: json }));
+  axios.get('assets/svg/mouth.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, mouth: response.data }));
     });
 
-  fetch('assets/svg/eyes.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, eyes: json }));
+  axios.get('assets/svg/eyes.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, eyes: response.data }));
     });
-  fetch('assets/svg/shoes.json')
-    .then((response) => response.json())
-    .then((json) => {
-      setSvgData((previous) => ({ ...previous, shoes: json }));
+  axios.get('assets/svg/shoes.json')
+    .then((response) => {
+      setSvgData((previous) => ({ ...previous, shoes: response.data }));
     });
 };

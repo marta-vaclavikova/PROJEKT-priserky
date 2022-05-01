@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import BodyCategory from './BodyCategory';
 import BodyTemplate from './BodyTemplate';
 import MonsterTemplate from './template/MonsterTemplate';
 import './monster.css';
+
 
 function GenerateMonster() {
   const [monster, setMonster] = useState();
   const [category, setCategory] = useState(undefined);
 
   useEffect(() => {
-    fetch('assets/initial-monster.json')
-      .then((response) => response.json())
-      .then((json) => {
-        setMonster(json);
+    axios.get('assets/initial-monster.json')
+      .then((response) => {
+        setMonster(response.data);
       });
   }, []);
 
