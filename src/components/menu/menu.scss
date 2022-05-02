@@ -1,0 +1,42 @@
+.menu {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 15px;
+    font-family: var(--font-special);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: var(--c-blue);
+    }
+  }
+
+  &--footer {
+    .menu__link {
+      display: block;
+      padding: 5px 10px;
+      font-size: 12px;
+
+      &:hover {
+        background-color: white;
+        color: var(--c-red);
+      }
+    }
+  }
+}

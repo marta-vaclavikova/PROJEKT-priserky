@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const SvgContext = createContext({ data: undefined });
+const SvgContext = createContext({ undefined });
 
 export default SvgContext;

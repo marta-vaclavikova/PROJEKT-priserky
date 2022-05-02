@@ -1,35 +1,24 @@
 import React, { useContext } from 'react';
 import SvgContext from '../context/SvgContext';
-import ArmsTemplate from './template/ArmsTemplate';
 import CommonTemplate from './template/CommonTemplate';
-import LegsTemplate from './template/LegsTemplate';
-import ShoesTemplate from './template/ShoesTemplate';
+import './monster.scss';
 
 function TemplateSwitch({ category, svg }) {
   switch (category) {
     case 'legs': {
-      return <LegsTemplate svg={svg} />;
+      return <CommonTemplate svg={svg} height={60} width={20} />;
     }
     case 'arms': {
-      return <ArmsTemplate svg={svg} />;
-    }
-    case 'shoes': {
-      return <ShoesTemplate svg={svg} />;
-    }
-    case 'head': {
-      return <CommonTemplate svg={svg} height={1400} width={1500} />;
+      return <CommonTemplate svg={svg} height={91} width={50} />;
     }
     case 'eyes': {
-      return <CommonTemplate svg={svg} height={350} width={750} />;
-    }
-    case 'clothes': {
-      return <CommonTemplate svg={svg} height={580} width={540} />;
+      return <CommonTemplate svg={svg} height={43} width={16} />;
     }
     case 'mouth': {
-      return <CommonTemplate svg={svg} height={220} width={330} />;
+      return <CommonTemplate svg={svg} height={42} width={26} />;
     }
-    case 'torso': {
-      return <CommonTemplate svg={svg} height={600} width={450} />;
+    case 'body': {
+      return <CommonTemplate svg={svg} height={93} width={88} />;
     }
     default: {
       //  ignore
@@ -41,13 +30,13 @@ function BodyTemplate({ category }) {
   const svgContext = useContext(SvgContext);
 
   return (
-    <>
+    <div className="body-template">
       {Object.keys(svgContext.data[category]).map((template) => (
-        <button type="button" className="body-button">
+        <button type="button" className="body-template__button">
           <TemplateSwitch key={template} category={category} svg={svgContext.data[category][template]} />
         </button>
       )) }
-    </>
+    </div>
   );
 }
 

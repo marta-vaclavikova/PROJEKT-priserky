@@ -1,0 +1,38 @@
+.home {
+  background: url(./img/background.png) no-repeat right/contain;
+  min-height: 500px;
+  padding-top: 20px;
+
+  &__link {
+    display: block;
+    width: 250px;
+    height: 200px;
+    padding: 40px 10px;
+    background-color: var(--c-green);
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--c-green);
+      background-color: white;
+    }
+  }
+  &__action {
+    text-transform: uppercase;
+  }
+  &__description {
+    margin: 0;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    gap: 15px;
+
+    &__info {
+      grid-column: span 3;
+    }
+  }
+}

@@ -3,8 +3,7 @@ import axios from 'axios';
 import BodyCategory from './BodyCategory';
 import BodyTemplate from './BodyTemplate';
 import MonsterTemplate from './template/MonsterTemplate';
-import './monster.css';
-
+import './monster.scss';
 
 function GenerateMonster() {
   const [monster, setMonster] = useState();
@@ -18,11 +17,11 @@ function GenerateMonster() {
   }, []);
 
   return (
-    <>
-      <div className="monster-image">{monster && <MonsterTemplate monster={monster} /> }</div>
+    <section className="generate-monster">
+      <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
       <BodyCategory setCategory={setCategory} category={category} />
       {category && <BodyTemplate category={category} />}
-    </>
+    </section>
   );
 }
 
