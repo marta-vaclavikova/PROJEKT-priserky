@@ -1,15 +1,18 @@
 import React from 'react';
 
-function BodyCategory({ category, setCategory }) {
+function BodyCategory({ setCategory }) {
   return (
-    <>
-      <h2>{category}</h2>
-      <button type="button" onClick={() => setCategory('body')}>Tělo</button>
-      <button type="button" onClick={() => setCategory('legs')}>Nohy</button>
-      <button type="button" onClick={() => setCategory('arms')}>Ruce</button>
-      <button type="button" onClick={() => setCategory('eyes')}>Oči</button>
-      <button type="button" onClick={() => setCategory('mouth')}>Ústa</button>
-    </>
+    <div className="body-category">
+      <h2>Vytvoř svoji příšerku</h2>
+      <p>Vyber část těla příšerky</p>
+      <div className="body-category__buttons">
+        <button className="body-category__button" type="button" onClick={() => setCategory('body')}>Tělo</button>
+        <button className="body-category__button" type="button" onClick={() => setCategory('legs')}>Nohy</button>
+        <button className="body-category__button" type="button" onClick={() => setCategory('arms')}>Ruce</button>
+        <button className="body-category__button" type="button" onClick={() => setCategory('eyes')}>Oči</button>
+        <button className="body-category__button" type="button" onClick={() => setCategory('mouth')}>Ústa</button>
+      </div>
+    </div>
   );
 }
 

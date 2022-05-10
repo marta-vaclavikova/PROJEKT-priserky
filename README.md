@@ -12,3 +12,8 @@
 | ff | legs |
 
 E.g. _010215052251_ is head number 01, torso 02, mouth 15, eyes- 05, arms 22, legs 51
+
+
+| Part | Width | Height |
+| ----------- | ----------- | ----------- | 
+| body | 67-77px / 100px | 88px |

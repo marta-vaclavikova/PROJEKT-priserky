@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 /* intuitivnější box-sizing pro všechny prvky na stránce */
@@ -26,6 +26,7 @@ html {
   --c-blue: #44abdd;
   --c-green: #99C027;
   --c-red: #C05746;
+  --c-grey: #f1f0eb;
 
   --primary: #004769;
   --accent: #fc0;
@@ -51,12 +52,12 @@ html {
 body {
   margin: 0;
   font-family: var(--font-default);
-  background-color: var(--grey-900);
+  background-color: silver;
 }
 
 .container {
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--c-grey);
   max-width: 66rem;
 }
 
@@ -94,4 +95,8 @@ section {
 
 p+p {
   margin-bottom: 0;
+}
+
+main {
+  min-height: 650px;
 }

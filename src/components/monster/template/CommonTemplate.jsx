@@ -1,10 +1,10 @@
 import React from 'react';
 
-function CommonTemplate({ svg, width, height }) {
+function CommonTemplate({ svg, width, height, widthStart = 0 }) {
   return (
     <svg
       className="svg"
-      viewBox={`0 0 ${width} ${height}`}
+      viewBox={`${widthStart} 0 ${width} ${height}`}
     >
       <g>
         {svg.map((path, index) => (

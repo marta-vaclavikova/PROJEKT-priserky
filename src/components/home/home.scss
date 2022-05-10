@@ -6,7 +6,7 @@
   &__link {
     display: block;
     width: 250px;
-    height: 200px;
+    height: 250px;
     padding: 40px 10px;
     background-color: var(--c-green);
     border: 1px solid black;
@@ -33,6 +33,7 @@
 
     &__info {
       grid-column: span 3;
+      margin-bottom: 50px;
     }
   }
 }

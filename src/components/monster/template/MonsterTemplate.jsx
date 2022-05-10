@@ -6,14 +6,14 @@ function MonsterTemplate({ monster }) {
 
   return (
     <svg
-      viewBox="0 0 25 30"
+      viewBox="0 0 27 32"
     >
-      <g id="arms" transform="translate(0,14)">
+      <g id="arms" transform="translate(1,14)">
         {svgContext.data?.arms?.[monster.arms].map((path, index) => (
           <path key={index} fill={path.fill} d={path.path} />
         ))}
       </g>
-      <g id="legs" transform="translate(4,22)">
+      <g id="legs" transform="translate(5,22)">
         {svgContext.data?.legs?.[monster.legs].map((path, index) => (
           <path key={index} fill={path.fill} d={path.path} />
         ))}
@@ -23,12 +23,12 @@ function MonsterTemplate({ monster }) {
           <path key={index} fill={path.fill} d={path.path} />
         ))}
       </g>
-      <g id="eyes" transform="translate(6.5,7)">
+      <g id="eyes" transform="translate(7,7)">
         {svgContext.data?.eyes?.[monster.eyes].map((path, index) => (
           <path key={index} fill={path.fill} d={path.path} />
         ))}
       </g>
-      <g id="mouth" transform="translate(6.5,14)">
+      <g id="mouth" transform="translate(7,13)">
         {svgContext.data?.mouth?.[monster.mouth].map((path, index) => (
           <path key={index} fill={path.fill} d={path.path} />
         ))}

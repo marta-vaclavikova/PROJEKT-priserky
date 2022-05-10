@@ -16,11 +16,20 @@ function GenerateMonster() {
       });
   }, []);
 
+  const changeBodyPart = (template, categoryChange) => {
+    setMonster({ ...monster, [categoryChange]: template });
+  };
+
   return (
     <section className="generate-monster">
-      <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
-      <BodyCategory setCategory={setCategory} category={category} />
-      {category && <BodyTemplate category={category} />}
+      <h1>Generuj příšerku</h1>
+      <div className="generate-monster__body">
+        <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
+        <div className="generate-monster__customize">
+          <BodyCategory setCategory={setCategory} />
+          {category && <BodyTemplate category={category} changeBodyPart={changeBodyPart} />}
+        </div>
+      </div>
     </section>
   );
 }
