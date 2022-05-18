@@ -4,6 +4,15 @@ import SvgContext from '../../context/SvgContext';
 function MonsterTemplate({ monster }) {
   const svgContext = useContext(SvgContext);
 
+  if (svgContext.data?.arms?.[monster.arms] === undefined
+     || svgContext.data?.legs?.[monster.legs] === undefined
+     || svgContext.data?.body?.[monster.body] === undefined
+     || svgContext.data?.eyes?.[monster.eyes] === undefined
+     || svgContext.data?.mouth?.[monster.mouth] === undefined) {
+    return (
+      <div>Špatný kód, příšerku nelze zobrazit</div>
+    );
+  }
   return (
     <svg
       viewBox="0 0 27 32"

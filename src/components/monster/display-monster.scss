@@ -1,0 +1,26 @@
+@import "./../../style/_variables.scss";
+
+.display-monster {
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    label {
+      color: gray;
+    }
+
+    input {
+      margin-left: 20px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}

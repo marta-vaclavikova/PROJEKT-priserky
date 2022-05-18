@@ -1,0 +1,30 @@
+@import "./../../style/_variables.scss";
+
+.generate-monster {
+  &__image {
+    width: 300px;
+    background-color: white;
+    margin: 20px auto;
+
+    @media screen and (min-width: 960px) {
+      flex: 1 0 300px;
+      align-self: center;
+    }
+  }
+  &__customize {
+    background-color: $background-2;
+    color: white;
+    padding: 5px;
+
+    @media screen and (min-width: 960px) {
+      padding: 20px;
+    }
+  }
+
+  &__body {
+    @media screen and (min-width: 960px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}

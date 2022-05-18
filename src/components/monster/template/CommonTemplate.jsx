@@ -1,6 +1,8 @@
 import React from 'react';
 
-function CommonTemplate({ svg, width, height, widthStart = 0 }) {
+function CommonTemplate({
+  svg, width, height, widthStart = 0,
+}) {
   return (
     <svg
       className="svg"

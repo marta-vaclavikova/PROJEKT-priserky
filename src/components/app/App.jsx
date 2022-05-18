@@ -11,7 +11,7 @@ import Header from '../header/Header';
 import Home from '../home/Home';
 import DisplayMonster from '../monster/DisplayMonster';
 import GenerateMonster from '../monster/GenerateMonster';
-import './style.css';
+import './app.scss';
 
 function App() {
   const [svgData, setSvgData] = useState({});
@@ -32,6 +32,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/generate" element={<GenerateMonster />} />
               <Route path="/display" element={<DisplayMonster />} />
+              <Route path="/display/:id" element={<DisplayMonster />} />
               <Route path="/gallery" element={<Gallery />} />
             </Routes>
           </main>

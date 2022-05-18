@@ -1,7 +1,31 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import MonsterTemplate from '../monster/template/MonsterTemplate';
 import './home.scss';
+
+const monsterList = [
+  {
+    eyes: '01',
+    body: '01',
+    legs: '01',
+    arms: '01',
+    mouth: '01',
+  },
+  {
+    eyes: '04',
+    body: '06',
+    legs: '02',
+    arms: '05',
+    mouth: '07',
+  },
+  {
+    eyes: '08',
+    body: '11',
+    legs: '12',
+    arms: '15',
+    mouth: '08',
+  }    
+];
 
 function Home() {
   return (
@@ -23,6 +47,14 @@ function Home() {
         <h2 className="home__action">Vyzvedni příšerku</h2>
         <p className="home__description">Vyzvedni si příšerku pomocí kódu, který ti někdo zaslal.</p>
       </Link>
+
+      <div className="home__pictures">
+        {monsterList.map((monster, index) => (
+          <div className={`home__picture home__picture-${index}`}>
+            <MonsterTemplate monster={monster} />
+          </div>
+        ))}
+      </div>
 
     </section>
   );

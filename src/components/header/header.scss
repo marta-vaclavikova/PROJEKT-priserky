@@ -1,29 +1,29 @@
+@import './../../style/_variables.scss';
+
 .header {
-  background-color: var(--c-blue);
-  padding: 0 20px;
+  background-color: $background-2;
+  margin-bottom: 10px;
 
   &__left {
+    padding: 0 10px;
     display: flex;
     gap: 5px;
     align-items: center;
   }
 
-  &__logo {
-    width: 50px;
+  &__title {
+    font-family: $font-special;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
 
-    img {
-      width: 100%;
+    @media screen and (min-width: 992px) {
+      font-size: 40px;
     }
   }
 
-  &__title {
-    font-family: var(--font-special);
-    font-size: 40px;
-    text-transform: uppercase;
-    color: white;
-  }
-
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 900px) {
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

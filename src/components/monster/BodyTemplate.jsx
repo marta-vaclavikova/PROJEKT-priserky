@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import SvgContext from '../context/SvgContext';
 import CommonTemplate from './template/CommonTemplate';
-import './monster.scss';
+import './body-template.scss';
+import ColorTemplate from './template/ColorTemplate';
 
 function TemplateSwitch({ category, svg }) {
   switch (category) {
     case 'legs': {
-      return <CommonTemplate svg={svg} widthStart={-2} width={20} height={4} />;
+      return <CommonTemplate svg={svg} widthStart={-2} width={22} height={4} />;
     }
     case 'arms': {
       return <CommonTemplate svg={svg} widthStart={-2} width={29} height={6} />;
@@ -19,6 +20,9 @@ function TemplateSwitch({ category, svg }) {
     }
     case 'body': {
       return <CommonTemplate svg={svg} width={27} height={27} />;
+    }
+    case 'colors': {
+      return <ColorTemplate colors={svg} />;
     }
     default: {
       //  ignore
@@ -33,7 +37,6 @@ function BodyTemplate({ category, changeBodyPart }) {
     changeBodyPart(template, category);
   };
 
-  console.log("dd"+Object.keys(svgContext.data[category]));
   return (
     <div className="body-template">
       {Object.keys(svgContext.data[category]).sort().map((template) => (

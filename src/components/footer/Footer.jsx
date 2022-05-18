@@ -17,7 +17,6 @@ function Footer() {
         and
         <a href="www.freepik.com">www.freepik.com</a>
       </div>
-      <Menu className="menu--footer" />
     </footer>
   );
 }

@@ -1,0 +1,112 @@
+[
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "01",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 1"
+  },
+  {
+    "svg": {
+      "eyes": "02",
+      "body": "02",
+      "legs": "02",
+      "arms": "02",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 2"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "03",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 3"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "04",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 4"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "05",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 5"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "06",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 6"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "07",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 7"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "08",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 8"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "09",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 9"
+  },
+  {
+    "svg": {
+      "eyes": "01",
+      "body": "10",
+      "legs": "01",
+      "arms": "01",
+      "mouth": "01",
+      "colors": "01"
+    },
+    "title": "Příšerka číslo 10"
+  }
+]

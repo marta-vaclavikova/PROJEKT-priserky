@@ -1,0 +1,60 @@
+@import './../../style/_variables.scss';
+
+.body-category {
+  margin: 10px;
+  text-align: center;
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    
+    justify-content: space-evenly;
+    align-items: center;
+
+    &--detail {
+      flex-wrap: wrap;
+    }
+
+
+    @media screen and (min-width: 768px) {
+      margin-top: 70px;
+    }
+  }
+  &__button {
+    flex-basis: 0 0 80px;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    font-family: $font-special;
+    border-radius: 8px;
+
+    &--active {
+      background-color: $background-5;
+      height: 90px;
+      width: 90px;
+      flex-basis: 0 0 90px;
+    }
+
+    &:hover {
+      background-color: $background-5;
+      border: none;
+    }
+  }
+
+  &__back {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,7 +1,13 @@
+@import './../../style/_variables.scss';
+
 .footer {
-  background-color: var(--c-red);
   color: white;
+  background-color: $background-1;
   padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 
   &__links {
     font-size: 10px;
@@ -10,9 +16,5 @@
     }
   }
 
-  @media screen and (min-width: 960px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  
 }

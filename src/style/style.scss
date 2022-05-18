@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+@import './_variables.scss';
+
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: $font-default;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-special;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+p+p {
+  margin-bottom: 0;
+}
+
+button {
+  font-family: $font-default;
+  font-weight: 700;
+  font-size: 20px;
+  background-color:  $background-1;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+}
+
+
+input[type="text"]
+{
+    border: 1px solid $background-1;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color:$background-5;
+}

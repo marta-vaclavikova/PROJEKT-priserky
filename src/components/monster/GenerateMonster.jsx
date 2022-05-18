@@ -3,14 +3,14 @@ import axios from 'axios';
 import BodyCategory from './BodyCategory';
 import BodyTemplate from './BodyTemplate';
 import MonsterTemplate from './template/MonsterTemplate';
-import './monster.scss';
+import './generate-monster.scss';
 
 function GenerateMonster() {
   const [monster, setMonster] = useState();
   const [category, setCategory] = useState(undefined);
 
   useEffect(() => {
-    axios.get('assets/initial-monster.json')
+    axios.get('/assets/initial-monster.json')
       .then((response) => {
         setMonster(response.data);
       });
@@ -26,7 +26,7 @@ function GenerateMonster() {
       <div className="generate-monster__body">
         <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
         <div className="generate-monster__customize">
-          <BodyCategory setCategory={setCategory} />
+          <BodyCategory setCategory={setCategory} category={category}/>
           {category && <BodyTemplate category={category} changeBodyPart={changeBodyPart} />}
         </div>
       </div>

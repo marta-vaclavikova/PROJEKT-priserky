@@ -1,10 +1,14 @@
 import React from 'react';
+import { List } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import './menu.scss';
 
-function Menu({ className }) {
+function Menu() {
   return (
-    <nav className={`menu ${className}`}>
+    <nav className="menu">
+      <input type="checkbox" className="menu__checkbox" id="menu-checkbox" />
+      <label htmlFor="menu-checkbox" className="menu__toggler"><List /></label>
+
       <ul className="menu__list">
         <li className="menu__item">
           <Link className="menu__link" to="/">
