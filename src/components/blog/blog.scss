@@ -1,0 +1,27 @@
+.blog {
+  padding-left: 10px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  &__image {
+    padding: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+  &__meta {
+    margin: 0;
+    font-size: 10px;
+  }
+  &__perex {
+    margin: 0;
+    font-size: 12px;
+  }
+}

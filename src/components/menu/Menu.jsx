@@ -1,39 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { List } from 'phosphor-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './menu.scss';
 
 function Menu() {
+  const [checked, setChecked] = useState(false);
   return (
     <nav className="menu">
-      <input type="checkbox" className="menu__checkbox" id="menu-checkbox" />
-      <label htmlFor="menu-checkbox" className="menu__toggler"><List /></label>
+      <input
+        type="checkbox"
+        className="menu__checkbox"
+        id="menu-checkbox"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+      />
+      <label htmlFor="menu-checkbox" className="menu__toggler">
+        <List />
+      </label>
 
       <ul className="menu__list">
         <li className="menu__item">
-          <Link className="menu__link" to="/">
+          <NavLink
+            className={({ isActive }) => `menu__link ${isActive ? 'menu__link--active' : ''}`}
+            onClick={() => setChecked(false)}
+            to="/"
+          >
             Úvod
-          </Link>
+          </NavLink>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/generate">
+          <NavLink
+            className={({ isActive }) => `menu__link ${isActive ? 'menu__link--active' : ''}`}
+            onClick={() => setChecked(false)}
+            to="/generate"
+          >
             Generuj příšerku
-          </Link>
+          </NavLink>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/display">
+          <NavLink
+            className={({ isActive }) => `menu__link ${isActive ? 'menu__link--active' : ''}`}
+            onClick={() => setChecked(false)}
+            to="/display"
+          >
             Vyzvedni příšerku
-          </Link>
+          </NavLink>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/gallery">
+          <NavLink
+            className={({ isActive }) => `menu__link ${isActive ? 'menu__link--active' : ''}`}
+            onClick={() => setChecked(false)}
+            to="/gallery"
+          >
             Galerie
-          </Link>
+          </NavLink>
         </li>
         <li className="menu__item">
-          <Link className="menu__link" to="/blog">
+          <NavLink
+            className={({ isActive }) => `menu__link ${isActive ? 'menu__link--active' : ''}`}
+            onClick={() => setChecked(false)}
+            to="/blog"
+          >
             Blog
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

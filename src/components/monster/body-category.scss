@@ -21,7 +21,7 @@
     }
   }
   &__button {
-    flex-basis: 0 0 80px;
+    flex: 0 0 80px;
     height: 80px;
     width: 80px;
     background-color: white;
@@ -31,6 +31,7 @@
     border: none;
     font-family: $font-special;
     border-radius: 8px;
+    color: black;
 
     &--active {
       background-color: $background-5;

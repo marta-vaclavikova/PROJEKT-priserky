@@ -29,7 +29,7 @@
     text-decoration: none;
     color: white;
 
-    &:hover {
+    &:hover, &--active {
       background-color: white;
       color: $background-2;
     }

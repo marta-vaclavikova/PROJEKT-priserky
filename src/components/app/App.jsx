@@ -2,6 +2,8 @@ import React, { useEffect, useState, useMemo } from 'react';
 import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
+import Article from '../blog/Article';
+import Blog from '../blog/Blog';
 
 import SvgContext from '../context/SvgContext';
 import { loadSvgData } from '../context/svgLoader';
@@ -34,6 +36,8 @@ function App() {
               <Route path="/display" element={<DisplayMonster />} />
               <Route path="/display/:id" element={<DisplayMonster />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<Article />} />
             </Routes>
           </main>
           <Footer />
