@@ -27,6 +27,8 @@ color 3 | #d1d1d1
 
 ## Layout width breakpoints
 
+1200px
+
 992px
 
 768px

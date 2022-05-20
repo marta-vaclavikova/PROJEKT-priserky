@@ -10,6 +10,7 @@ const monsterList = [
     legs: '01',
     arms: '01',
     mouth: '01',
+    colors: '08',
   },
   {
     eyes: '04',
@@ -17,6 +18,7 @@ const monsterList = [
     legs: '02',
     arms: '05',
     mouth: '07',
+    colors: '12',
   },
   {
     eyes: '08',
@@ -24,7 +26,8 @@ const monsterList = [
     legs: '12',
     arms: '15',
     mouth: '08',
-  }    
+    colors: '04',
+  },
 ];
 
 function Home() {
@@ -50,7 +53,7 @@ function Home() {
 
       <div className="home__pictures">
         {monsterList.map((monster, index) => (
-          <div className={`home__picture home__picture-${index}`}>
+          <div className={`home__picture home__picture-${index}`} key={index}>
             <MonsterTemplate monster={monster} />
           </div>
         ))}

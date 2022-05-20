@@ -15,6 +15,7 @@ function Footer() {
         <a href="https://pixabay.com/">pixabay.com</a>
         {' '}
         and
+        {' '}
         <a href="www.freepik.com">www.freepik.com</a>
       </div>
     </footer>

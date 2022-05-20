@@ -20,16 +20,25 @@ function GenerateMonster() {
     setMonster({ ...monster, [categoryChange]: template });
   };
 
+  const getMonsterCode = (m) => `${m.eyes}${m.body}${m.legs}${m.arms}${m.mouth}${m.colors}`;
+
   return (
     <section className="generate-monster">
       <h1>Generuj příšerku</h1>
       <div className="generate-monster__body">
         <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
         <div className="generate-monster__customize">
-          <BodyCategory setCategory={setCategory} category={category}/>
+          <BodyCategory setCategory={setCategory} category={category} />
           {category && <BodyTemplate category={category} changeBodyPart={changeBodyPart} />}
         </div>
       </div>
+      {monster && (
+      <div className="generate-monster__code">
+        Kód pro vyzvednutí příšerky:
+        {' '}
+        <a href={`/display/${getMonsterCode(monster)}`}>{getMonsterCode(monster)}</a>
+      </div>
+      )}
     </section>
   );
 }

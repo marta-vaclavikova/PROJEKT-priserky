@@ -1,24 +1,25 @@
-.article__title  {
-  font-size: 48px;
-  margin: 0;
-}
+.article {
+  padding: 0 20px;
+  &__meta {
+    color: gray;
+  }
 
-.article__meta {
-  color: silver;
-}
+  &__content {
+    @media screen and (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 50px;
+    }
+  }
 
-.article__content {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 50px;
-}
+  &__perex {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 
-.article__perex {
-  font-weight: bold;
-  font-size: 1.2em;
+  &__image {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
-
-.article__image {
-  display: block;
-  width: 100%;
-} 

@@ -1,112 +1,112 @@
 [
   {
     "svg": {
-      "eyes": "01",
-      "body": "01",
-      "legs": "01",
-      "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "eyes": "07",
+      "body": "06",
+      "legs": "09",
+      "arms": "03",
+      "mouth": "11",
+      "colors": "11"
     },
-    "title": "Příšerka číslo 1"
+    "title": "Milá příšerka"
   },
   {
     "svg": {
-      "eyes": "02",
+      "eyes": "04",
       "body": "02",
       "legs": "02",
       "arms": "02",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "15",
+      "colors": "15"
     },
-    "title": "Příšerka číslo 2"
+    "title": "Hodná příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "06",
       "body": "03",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "07",
+      "colors": "05"
     },
-    "title": "Příšerka číslo 3"
+    "title": "Zlá příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "09",
       "body": "04",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "09",
+      "colors": "25"
     },
-    "title": "Příšerka číslo 4"
+    "title": "Okatá příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "13",
       "body": "05",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "14",
+      "colors": "20"
     },
-    "title": "Příšerka číslo 5"
+    "title": "Chlupatá příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "15",
       "body": "06",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "19",
+      "colors": "18"
     },
-    "title": "Příšerka číslo 6"
+    "title": "Zubatá příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "18",
       "body": "07",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "11",
+      "colors": "29"
     },
-    "title": "Příšerka číslo 7"
+    "title": "Rohatá příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "19",
       "body": "08",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "25",
+      "colors": "07"
     },
-    "title": "Příšerka číslo 8"
+    "title": "Velká příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "08",
       "body": "09",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "20",
+      "colors": "21"
     },
-    "title": "Příšerka číslo 9"
+    "title": "Čertovská příšerka"
   },
   {
     "svg": {
-      "eyes": "01",
+      "eyes": "20",
       "body": "10",
       "legs": "01",
       "arms": "01",
-      "mouth": "01",
-      "colors": "01"
+      "mouth": "09",
+      "colors": "09"
     },
-    "title": "Příšerka číslo 10"
+    "title": "Kudrnatá příšerka"
   }
 ]

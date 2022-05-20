@@ -15,7 +15,7 @@ import DisplayMonster from '../monster/DisplayMonster';
 import GenerateMonster from '../monster/GenerateMonster';
 import './app.scss';
 
-function App() {
+const App = () => {
   const [svgData, setSvgData] = useState({});
 
   useEffect(() => {

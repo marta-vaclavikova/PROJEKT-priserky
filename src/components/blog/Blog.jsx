@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './blog.scss';
 
-function BlogDetail({
+const BlogDetail = ({
   article: {
-    title, date, image, perex,
+    title, date, image, perex, id,
   },
-}) {
-  return (
+}) => (
+  <Link to={`/blog/${id}`} key={id}>
     <article className="blog__item">
       <div className="blog__image">
         <img src={`/assets/images/${image}`} alt={title} />
@@ -18,8 +19,8 @@ function BlogDetail({
         <p className="blog__perex">{perex}</p>
       </div>
     </article>
-  );
-}
+  </Link>
+);
 
 function Blog() {
   const [articles, setArticles] = useState([]);
@@ -36,7 +37,7 @@ function Blog() {
       <h1>Blog</h1>
       <div className="blog">
         {articles && articles.map((article) => (
-          <BlogDetail article={article} />
+          <BlogDetail article={article} key={article.id}/>
         ))}
       </div>
     </section>

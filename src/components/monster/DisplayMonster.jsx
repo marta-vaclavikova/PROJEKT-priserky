@@ -58,8 +58,22 @@ function DisplayMonster() {
       <div className="display-monster__picture">
         <h2>Tvoje příšerka</h2>
         <MonsterTemplate monster={monster} />
-        <button type="button" onClick={handleNextClick}>Zobrazit další příšerku</button>
-        <button type="button" onClick={() => navigate('/generate')}>Vygenerovat novou příšerku</button>
+        <button
+          type="button"
+          className="display-monster__next"
+          onClick={handleNextClick}
+        >
+          Zobrazit další příšerku
+
+        </button>
+        <button
+          type="button"
+          className="display-monster__next"
+          onClick={() => navigate('/generate')}
+        >
+          Vygenerovat novou příšerku
+
+        </button>
       </div>
       ) }
 
