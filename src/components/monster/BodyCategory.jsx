@@ -2,19 +2,18 @@ import React from 'react';
 import { ArrowLeft } from 'phosphor-react';
 import './body-category.scss';
 
-function BodyCategory({ setCategory, category }) {
-  return (
-    <div className="body-category">
-      {!category && <h2>Vytvoř svoji příšerku</h2>}
-      {!category && <p>Vyber část těla příšerky</p>}
-      <div className={`body-category__buttons ${category ? '' : 'body-category__buttons--detail'}`}>
-        {category
+const BodyCategory = ({ setCategory, category }) => (
+  <div className="body-category">
+    {!category && <h2>Vytvoř svoji příšerku</h2>}
+    {!category && <p>Vyber část těla příšerky</p>}
+    <div className={`body-category__buttons ${category ? '' : 'body-category__buttons--detail'}`}>
+      {category
         && (
         <button className="body-category__back" type="button" onClick={() => setCategory(null)}>
           <ArrowLeft />
         </button>
         )}
-        {(!category || category === 'body') && (
+      {(!category || category === 'body') && (
         <button
           className={`body-category__button ${category === 'body'
             ? 'body-category__button--active'
@@ -24,8 +23,8 @@ function BodyCategory({ setCategory, category }) {
         >
           Tělo
         </button>
-        )}
-        {(!category || category === 'legs') && (
+      )}
+      {(!category || category === 'legs') && (
         <button
           className={`body-category__button ${category === 'legs'
             ? 'body-category__button--active'
@@ -35,8 +34,8 @@ function BodyCategory({ setCategory, category }) {
         >
           Nohy
         </button>
-        )}
-        {(!category || category === 'arms') && (
+      )}
+      {(!category || category === 'arms') && (
         <button
           className={`body-category__button ${category === 'arms'
             ? 'body-category__button--active'
@@ -46,8 +45,8 @@ function BodyCategory({ setCategory, category }) {
         >
           Ruce
         </button>
-        )}
-        {(!category || category === 'eyes') && (
+      )}
+      {(!category || category === 'eyes') && (
         <button
           className={`body-category__button ${category === 'eyes'
             ? 'body-category__button--active'
@@ -57,8 +56,8 @@ function BodyCategory({ setCategory, category }) {
         >
           Oči
         </button>
-        )}
-        {(!category || category === 'mouth') && (
+      )}
+      {(!category || category === 'mouth') && (
         <button
           className={`body-category__button ${category === 'mouth'
             ? 'body-category__button--active'
@@ -68,8 +67,8 @@ function BodyCategory({ setCategory, category }) {
         >
           Ústa
         </button>
-        )}
-        {(!category || category === 'colors') && (
+      )}
+      {(!category || category === 'colors') && (
         <button
           className={`body-category__button ${category === 'colors'
             ? 'body-category__button--active'
@@ -79,10 +78,9 @@ function BodyCategory({ setCategory, category }) {
         >
           Barvy
         </button>
-        )}
-      </div>
+      )}
     </div>
-  );
-}
+  </div>
+);
 
 export default BodyCategory;

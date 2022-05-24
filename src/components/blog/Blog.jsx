@@ -37,7 +37,7 @@ function Blog() {
       <h1>Blog</h1>
       <div className="blog">
         {articles && articles.map((article) => (
-          <BlogDetail article={article} key={article.id}/>
+          <BlogDetail article={article} key={article.id} />
         ))}
       </div>
     </section>

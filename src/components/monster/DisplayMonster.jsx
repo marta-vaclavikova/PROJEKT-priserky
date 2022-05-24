@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import MonsterTemplate from './template/MonsterTemplate';
 import './display-monster.scss';
 
-function DisplayMonster() {
+const DisplayMonster = () => {
   const [code, setCode] = useState('');
   const [monster, setMonster] = useState(null);
   const navigate = useNavigate();
@@ -79,6 +79,6 @@ function DisplayMonster() {
 
     </section>
   );
-}
+};
 
 export default DisplayMonster;

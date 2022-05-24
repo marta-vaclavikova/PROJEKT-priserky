@@ -5,7 +5,7 @@ import BodyTemplate from './BodyTemplate';
 import MonsterTemplate from './template/MonsterTemplate';
 import './generate-monster.scss';
 
-function GenerateMonster() {
+const GenerateMonster = () => {
   const [monster, setMonster] = useState();
   const [category, setCategory] = useState(undefined);
 
@@ -41,6 +41,6 @@ function GenerateMonster() {
       )}
     </section>
   );
-}
+};
 
 export default GenerateMonster;

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import SvgContext from '../../context/SvgContext';
 import './monster-template.scss';
 
-function MonsterTemplate({ monster }) {
+const MonsterTemplate = ({ monster }) => {
   const svgContext = useContext(SvgContext);
 
   if (svgContext.data?.arms?.[monster.arms] === undefined
@@ -65,6 +65,6 @@ function MonsterTemplate({ monster }) {
       </g>
     </svg>
   );
-}
+};
 
 export default MonsterTemplate;

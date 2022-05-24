@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import MonsterTemplate from '../monster/template/MonsterTemplate';
 import './gallery.scss';
 
-function Gallery() {
+const Gallery = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,6 @@ function Gallery() {
       </div>
     </section>
   );
-}
+};
 
 export default Gallery;

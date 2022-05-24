@@ -3,7 +3,7 @@ import { List } from 'phosphor-react';
 import { NavLink } from 'react-router-dom';
 import './menu.scss';
 
-function Menu() {
+const Menu = () => {
   const [checked, setChecked] = useState(false);
   return (
     <nav className="menu">

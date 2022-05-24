@@ -4,7 +4,7 @@ import CommonTemplate from './template/CommonTemplate';
 import './body-template.scss';
 import ColorTemplate from './template/ColorTemplate';
 
-function TemplateSwitch({ category, svg }) {
+const TemplateSwitch = ({ category, svg }) => {
   switch (category) {
     case 'legs': {
       return <CommonTemplate svg={svg} widthStart={-2} width={22} height={4} />;
@@ -28,7 +28,7 @@ function TemplateSwitch({ category, svg }) {
       //  ignore
     }
   }
-}
+};
 
 function BodyTemplate({ category, changeBodyPart }) {
   const svgContext = useContext(SvgContext);

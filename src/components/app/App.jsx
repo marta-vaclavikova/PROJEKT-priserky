@@ -45,6 +45,6 @@ const App = () => {
       </BrowserRouter>
     </SvgContext.Provider>
   );
-}
+};
 
 export default App;
