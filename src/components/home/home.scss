@@ -1,4 +1,4 @@
-@import './../../style/_variables.scss';
+@import "./../../style/_variables.scss";
 
 .home {
   padding-top: 20px;
@@ -8,16 +8,27 @@
     width: 250px;
     padding: 40px;
     margin: 10px auto;
-    background-color:  $background-4;
+    background-color: $background-4;
     border-radius: 50%;
     text-align: center;
     color: white;
     text-decoration: none;
 
+    @media screen and (min-width: 960px) {
+      &--generate {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      &--display {
+        grid-column: 2 / 2;
+        grid-row: 2 / 3;
+      }
+    }
     &:hover {
       background-color: $background-6;
     }
   }
+
   &__action {
     text-transform: uppercase;
   }
@@ -28,39 +39,21 @@
   &__info {
     text-align: center;
   }
-  &__pictures {
-    display: none;
-
-  } 
+  &__picture {
+    width: 200px;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
   @media screen and (min-width: 960px) {
     display: grid;
-    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-columns: 2fr 2fr 2fr;
     gap: 30px;
+    grid-auto-flow: row;
 
     &__info {
       grid-column: span 2;
       margin-bottom: 50px;
     }
-    &__pictures {
-      display: block;
-      grid-column: 3 / 4;
-      grid-row: 1 / 3;
-      position: relative;
-    }
-    &__picture {
-      width: 200px;
-      position: absolute;
-      padding-top: 30px;
-    }
-    &__picture-0 {
-      left: 50px;
-    }
-    &__picture-1 {
-      top: 250px;
-    }
-    &__picture-2 {
-      top: 200px;
-      left: 250px;
-    }
+
   }
 }

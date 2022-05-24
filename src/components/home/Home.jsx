@@ -10,7 +10,7 @@ const monsterList = [
     legs: '01',
     arms: '01',
     mouth: '01',
-    colors: '08',
+    colors: '19',
   },
   {
     eyes: '04',
@@ -28,6 +28,22 @@ const monsterList = [
     mouth: '08',
     colors: '04',
   },
+  {
+    eyes: '11',
+    body: '02',
+    legs: '20',
+    arms: '17',
+    mouth: '25',
+    colors: '17',
+  },
+  {
+    eyes: '15',
+    body: '14',
+    legs: '11',
+    arms: '09',
+    mouth: '22',
+    colors: '13',
+  },
 ];
 
 const Home = () => (
@@ -39,24 +55,22 @@ const Home = () => (
       <p>Máš-li kód, příšerku si vyzvedni.</p>
     </div>
 
-    <Link className="home__link" to="/generate">
+    <Link className="home__link home__link--generate" to="/generate">
       <h2 className="home__action">Generuj příšerku</h2>
       <p className="home__description">Vygeneruj si svoji příšerku.</p>
       <p className="home__description">Stáhni si ji nebo někomu pošli.</p>
     </Link>
 
-    <Link className="home__link" to="/display">
+    <Link className="home__link home__link--display" to="/display">
       <h2 className="home__action">Vyzvedni příšerku</h2>
       <p className="home__description">Vyzvedni si příšerku pomocí kódu, který ti někdo zaslal.</p>
     </Link>
 
-    <div className="home__pictures">
-      {monsterList.map((monster, index) => (
-        <div className={`home__picture home__picture-${index}`} key={index}>
-          <MonsterTemplate monster={monster} />
-        </div>
-      ))}
-    </div>
+    {monsterList.map((monster) => (
+      <div className="home__picture" key={monster.body}>
+        <MonsterTemplate monster={monster} />
+      </div>
+    ))}
 
   </section>
 );

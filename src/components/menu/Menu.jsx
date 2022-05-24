@@ -67,6 +67,6 @@ const Menu = () => {
       </ul>
     </nav>
   );
-}
+};
 
 export default Menu;

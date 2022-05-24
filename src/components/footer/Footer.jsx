@@ -4,7 +4,7 @@ import './footer.scss';
 const Footer = () => (
   <footer className="footer">
     <div className="footer__copyright">
-      &copy;2022 Marta
+      &copy;2022 Marta V - Czechitas - Staň se kodérkou
     </div>
     <div className="footer__links">
       Images from
