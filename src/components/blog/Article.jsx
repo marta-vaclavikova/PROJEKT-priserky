@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Rings } from 'react-loader-spinner';
 import { useParams } from 'react-router-dom';
 import './article.scss';
 
@@ -11,12 +12,25 @@ const Article = () => {
   useEffect(() => {
     axios.get('/assets/blog.json')
       .then((response) => {
-        setArticle(response.data.find((art) => art.id === parseInt(id, 10)));
+        const stringId = parseInt(id, 10);
+        setArticle(response.data.find((art) => art.id === stringId));
       });
   }, [id]);
 
   return (
     <article className="article">
+
+      {!article
+      && (
+      <div className="article__loading">
+        <Rings
+          height="100"
+          width="100"
+          color="#295288"
+          ariaLabel="loading"
+        />
+      </div>
+      )}
 
       <h1>{article?.title}</h1>
 
