@@ -1,7 +1,15 @@
 @import "./../../style/_variables.scss";
+@import './../../style/_mixins.scss';
 
 .home {
   padding-top: 20px;
+
+  @include large {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 30px;
+    grid-auto-flow: row;
+  }
 
   &__link {
     display: block;
@@ -14,7 +22,7 @@
     color: white;
     text-decoration: none;
 
-    @media screen and (min-width: 992px) {
+    @include large {
       &--generate {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
@@ -38,22 +46,16 @@
   }
   &__info {
     text-align: center;
+
+    @include large {
+      grid-column: span 2;
+      margin-bottom: 50px;
+    }
   }
   &__picture {
     width: 200px;
     padding-top: 30px;
     margin: 0 auto;
   }
-  @media screen and (min-width: 992px) {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: 30px;
-    grid-auto-flow: row;
 
-    &__info {
-      grid-column: span 2;
-      margin-bottom: 50px;
-    }
-
-  }
 }

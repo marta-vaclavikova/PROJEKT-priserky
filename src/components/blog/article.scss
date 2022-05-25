@@ -1,3 +1,5 @@
+@import './../../style/_mixins.scss';
+
 .article {
   padding: 0 20px;
   &__meta {
@@ -5,7 +7,7 @@
   }
 
   &__content {
-    @media screen and (min-width: 992px) {
+    @include large {
       display: grid;
       grid-template-columns: 3fr 2fr;
       gap: 50px;

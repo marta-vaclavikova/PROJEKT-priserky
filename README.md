@@ -4,33 +4,30 @@
 
 | Number | Body part |
 | ----------- | ----------- | 
-| aa | head |
-| bb | torso | 
-| cc | mouth | 
-| dd | eyes |
-| ee | arms |
-| ff | legs |
+| aa | eyes |
+| bb | body | 
+| cc | legs |
+| dd | arms |
+| ee | mouth | 
+| ff | colors | 
 
-E.g. _010215052251_ is head number 01, torso 02, mouth 15, eyes- 05, arms 22, legs 51
+E.g. _010215052251_ is eys number 01, body 02, legs 15, arms 05, mouth 22, colors 51
 
 
-| Part | Width | Height |
-| ----------- | ----------- | ----------- | 
-| body | 67-77px / 100px | 88px |
 
-##SVG
+## SVG gray colors
 
-color 1 | #575757
-color 2 | #8a8a8a
-color 3 | #d1d1d1
+| Name    | Color   | 
+|---------|---------|
+| color 1 | #575757 |
+| color 2 | #8a8a8a |
+| color 3 | #d1d1d1 |
 
 
 ## Layout width breakpoints
 
-1200px
-
-992px
-
-768px
-
-576px
+| Type  | min-width |
+|-------|-----------|
+| large | 992px     |
+| medium| 768px     |
+| small | 576px     |

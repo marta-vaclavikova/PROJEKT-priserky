@@ -1,4 +1,5 @@
 @import './../../style/_variables.scss';
+@import './../../style/_mixins.scss';
 
 .menu {
   position: relative;
@@ -9,7 +10,7 @@
     padding: 0;
     display: none;
 
-    @media screen and (min-width: 576px) {
+    @include small {
       display: flex !important;
       justify-content: flex-end;
     }
@@ -51,7 +52,7 @@
     top: -52px;
     color: white;
 
-    @media screen and (min-width: 576px) {
+    @include small {
       display: none;
     }
   }

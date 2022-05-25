@@ -1,4 +1,5 @@
 @import './../../style/_variables.scss';
+@import './../../style/_mixins.scss';
 
 .header {
   background-color: $background-2;
@@ -17,7 +18,7 @@
     text-transform: uppercase;
     color: white;
 
-    @media screen and (min-width: 992px) {
+    @include large {
       font-size: 35px;
     }
   }
