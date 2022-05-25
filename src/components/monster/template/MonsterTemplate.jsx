@@ -1,22 +1,8 @@
 import React, { useContext } from 'react';
 import SvgContext from '../../context/SvgContext';
-import './monster-template.scss';
 
-const MonsterTemplate = ({ monster }) => {
+const MonsterTemplate = ({ monster, svgRef }) => {
   const svgContext = useContext(SvgContext);
-
-  if (svgContext.data?.arms?.[monster.arms] === undefined
-     || svgContext.data?.legs?.[monster.legs] === undefined
-     || svgContext.data?.body?.[monster.body] === undefined
-     || svgContext.data?.eyes?.[monster.eyes] === undefined
-     || svgContext.data?.mouth?.[monster.mouth] === undefined) {
-    return (
-      <div className="monster-template__error">
-        <p>Špatný kód, příšerku nelze zobrazit.</p>
-        <p>Zkus zadat kód znovu</p>
-      </div>
-    );
-  }
 
   const convertColor = (inputColor, colors) => {
     switch (inputColor) {
@@ -37,6 +23,8 @@ const MonsterTemplate = ({ monster }) => {
   return (
     <svg
       viewBox="0 0 27 32"
+      ref={svgRef}
+      xmlns="http://www.w3.org/2000/svg"
     >
       <g id="arms" transform="translate(1,14)">
         {svgContext.data?.arms?.[monster.arms].map((path, index) => (

@@ -5,6 +5,7 @@ import BodyTemplate from './BodyTemplate';
 import MonsterTemplate from './template/MonsterTemplate';
 import SvgContext from '../context/SvgContext';
 import './generate-monster.scss';
+import fileDownload from 'js-file-download';
 
 const GenerateMonster = () => {
   const [monster, setMonster] = useState();
@@ -24,8 +25,9 @@ const GenerateMonster = () => {
 
   const getMonsterCode = (m) => `${m.eyes}${m.body}${m.legs}${m.arms}${m.mouth}${m.colors}`;
 
+  const monsterRef = React.useRef();
   const handleSave = () => {
-
+    fileDownload(monsterRef.current.outerHTML, 'priserka.svg');
   };
 
   const randomIntFromInterval = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -45,14 +47,15 @@ const GenerateMonster = () => {
     <section className="generate-monster">
       <h1>Generuj příšerku</h1>
       <div className="generate-monster__body">
-        <div className="generate-monster__image">{monster && <MonsterTemplate monster={monster} /> }</div>
+        <div className="generate-monster__image">
+          {monster && <MonsterTemplate monster={monster} svgRef={monsterRef} /> }
+        </div>
         <div className="generate-monster__customize">
           <BodyCategory setCategory={setCategory} category={category} />
           {category && <BodyTemplate category={category} changeBodyPart={changeBodyPart} />}
         </div>
 
-
-      {monster && (
+        {monster && (
         <>
           <div className="generate-monster__buttons">
             <div className="generate-monster__button">
@@ -71,9 +74,9 @@ const GenerateMonster = () => {
             {' '}
             <a href={`/display/${getMonsterCode(monster)}`}>{getMonsterCode(monster)}</a>
           </div>
-          </>
-      )}
-            </div>
+        </>
+        )}
+      </div>
     </section>
   );
 };

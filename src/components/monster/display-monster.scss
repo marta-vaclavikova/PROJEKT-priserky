@@ -25,7 +25,7 @@
     border: 1px solid $background-4;
     border-radius: 5px;
     padding: 5px 10px;
-   
+    color: white;
 
     &:hover {
       background-color: $background-6;
@@ -34,6 +34,15 @@
     &:disabled {
       background-color: white;
       border: 1px solid lightgrey;
+      color: lightgrey;
+    }
+  }
+
+  &__buttons {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      gap: 30px;
     }
   }
 
@@ -54,9 +63,22 @@
     font-family: $font-special;
     font-size: 20px;
     font-weight: 700;
+    margin: 10px;
 
     &:hover {
       background-color: $background-6;
+    }
+  }
+  &__error {
+    padding: 40px;
+    border: 1px solid red;
+    background-color: tomato;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    margin: 20px;
+    p {
+      margin: 0;
     }
   }
 }
